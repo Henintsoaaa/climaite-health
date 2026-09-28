@@ -25,9 +25,16 @@ Prédire la variable `is_climate_sensitive` à partir de caractéristiques démo
 
 ## Structure
 
-- `climate_health_starter_notebook_.ipynb` : workflow principal
-- `Train.csv` et `Test.csv` : données de compétition
-- `climate_features.csv` : variables climatiques enrichies
-- `*_submission.csv` : prédictions et variantes de soumission
+- `data/raw/` : données Train/Test et variables climatiques enrichies
+- `notebooks/` : workflow d'analyse et de modélisation
+- `submissions/` : prédictions et variantes de soumission
+- `submissions/templates/` : format officiel de soumission
+- `docs/` : dictionnaires de données
+
+## Exécution
+
+Depuis la racine du dépôt, ouvrir `notebooks/01_climate_health_baseline.ipynb` dans Jupyter.
+
+Le notebook charge automatiquement les fichiers depuis `../data/raw/` et sauvegarde la soumission dans `../submissions/`.
 
 La métrique officielle est `0.60 * F1 + 0.40 * ROC-AUC`.
